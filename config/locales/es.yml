@@ -1,0 +1,43 @@
+es:
+  activerecord:
+    models:
+      product: Producto
+    attributes:
+      product:
+        title: 'Título'
+        description: 'Descripción'
+        price: 'Precio'
+        image: 'Foto'
+        
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: ' : Este campo no puede estar vacío'
+            description:
+              blank: ': Este campo no puede estar vacío'
+            price:
+              blank: ': Este campo no puede estar vacío'
+  common:
+    confirm: '¿Estás seguro?'
+  shared:
+    header:
+      add: 'Añadir producto'
+  products:
+    edit:
+      title: 'Editar producto'
+    new:
+      title: 'Añadir producto'
+    index:
+      title: 'Productos:'
+      articles: 'Total Articulos'
+    show:
+      edit: 'Editar producto'
+      delete: 'Borrar producto'
+    create:
+      created: 'Tu artículo se ha creado correctamente'
+    update:
+      updated: 'Tu artículo se ha actualizado correctamente'
+    destroy:
+      destroyed: 'Tu artículo se ha eliminado correctamente'
