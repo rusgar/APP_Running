@@ -2,3 +2,16 @@
 <h1>Productos:</h1>
 
 <div>Fecha: <%= Date.today %></div>
+ <div>Total Articulos:
+        <%= @products.count %> 
+ </div> 
+
+
+
+
+<% @products.each do |product| %>
+    <%= link_to product_path(product) do %>
+    <h2><%= product.title %></h2>
+    <span><%= product.price %>$</span>
+  <% end %>
+<% end %>
