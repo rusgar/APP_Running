@@ -5,7 +5,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
      get products_path
 
          assert_response :success
-         assert_select '.product', 2
+         assert_select '.product', 3
   end
 
   test 'render a detailed product page' do
@@ -28,12 +28,13 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
           product: {
           title: 'Nintendo 64',
           description: 'Le faltan los cables',
-          price: 45
+          price: 45,
+          category_id: categories(:videogames).id
           }
          }
 
      assert_redirected_to products_path
-     assert_equal flash[:notice], 'Tu producto se ha creado correctamente'
+     assert_equal flash[:notice], 'Tu artículo se ha creado correctamente'
      end
 
   test 'does not allow to create a new product with empty fields' do
@@ -63,7 +64,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
      }
 
      assert_redirected_to products_path
-     assert_equal flash[:notice], 'Tu producto se ha actualizado correctamente'
+     assert_equal flash[:notice], 'Tu artículo se ha actualizado correctamente'
     end
 
   test 'does not allow to update a product with an invalid field' do
@@ -81,6 +82,6 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
         end
     
         assert_redirected_to products_path
-        assert_equal flash[:notice], 'Tu producto se ha eliminado correctamente'
+        assert_equal flash[:notice], 'Tu artículo se ha eliminado correctamente'
     end
 end
