@@ -19,7 +19,11 @@ class ProductsController < ApplicationController
         else
           render :new, status: :unprocessable_entity
         end
-      end
+    end
+
+    def edit
+        @product = Product.find(params[:id])
+    end
     
       private
     
