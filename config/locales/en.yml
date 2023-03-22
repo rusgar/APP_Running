@@ -35,97 +35,40 @@ en:
   activerecord:
     models:
       product: Product
+      user: User
+      category: Category
     attributes:
       product:
         title: 'Title'
         description: 'Description'
         price: 'Price'
-        image: 'image'
-        
-        
-    errors:
-      models:
-        product:
-          attributes:
-            title:
-              blank: "can't be blank"
-            description:
-              blank: "can't be blank"
-            price:
-              blank: "can't be blank"
-    errors:
-      models:
-        user:
-          attributes:
-            email:
-              blank: "can't be blank"
-              invalid: "can't be invalid"
-              taken: "can't be taken"              
-            username:
-              taken: "can't be taken"
-              blank: "can't be blank"
-              invalid: "can't be invalid"
-              too_short: 'very short username'
-              too_long: 'very long username'
-            password: 
-              blank: "can't be blank"
-              too_short: 'very short password'   
-              too_long: 'very long password'
+        image: 'Image'
+    user:
+        email: 'Email'
+        username: 'Username'
+        password: 'Password'
+    category:
+        name: 'Name'
   common:
     confirm: 'Are you sure?'
     back: 'Go back'
+    not_logged_in: 'You have to login or create an account'
   shared:
     header:
       add: 'Add product'
-      sections: 'Sections'
+      login: 'Login'
+      register: 'Register'
+      logout: 'Logout'
   authentication:
-      users:
-       create:
+    users:
+      create:
         created: 'Your account has been created!'
-      sessions:
-       create:
-         created: 'Welcome!'
-         failed: 'Invalid login!'    
+    sessions:
+      create:
+        created: 'Welcome!'
+        failed: 'Invalid login!'
+      destroy:
+        destroyed: 'Session ended. Bye!'
   products:
     edit:
       title: 'Edit product'
-    new:
-      title: 'Add product'
-    index:
-      title: 'Products:'
-      all: 'All'
-      articles: 'Total items'
-      min_price: 'Min price'
-      max_price: 'Max price'
-      query_text: 'What do you want to search?'
-      expensive: 'Expensive first'
-      cheapest: 'Cheaper first'
-      newest: 'Recently added'
-    show:
-      edit: 'Edit product'
-      delete: 'Delete product'
-    create:
-      created: 'Your product has been successfully created'
-    update:
-      updated: 'Your product has been successfully updated'
-    destroy:
-      destroyed: 'Your product has been successfully destroyed'
-    form:
-     Create: 'Create a new product'
-  categories:
-    category:
-      edit: 'Edit'
-      delete: 'Delete'
-    index:
-      title: 'Categories'
-      new: 'Add category'
-    edit:
-      title: 'Edit category'
-    create:
-      created: 'Your category has been successfully created'
-    update:
-      updated: 'Your category has been successfully updated'
-    destroy:
-      destroyed: 'Your category has been successfully destroyed'
-    new:
-      title: 'New category'

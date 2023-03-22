@@ -4,58 +4,50 @@ es:
   activerecord:
     models:
       product: Producto
+      user: Usuario
+      category: Categoría
     attributes:
       product:
         title: 'Título'
-        description: 'Descripción'        
+        description: 'Descripción'
         price: 'Precio'
-        image: 'Foto'          
+        image: 'Foto'
     errors:
       models:
         product:
           attributes:
             title:
-              blank: ' : Este campo no puede estar vacío'
+              blank: 'no puede estar vacío'
             description:
-              blank: ': Este campo no puede estar vacío'
+              blank: 'no puede estar vacía'
             price:
-              blank: ': Este campo no puede estar vacío'
-    errors:
-      models:
-        user:
-          attributes:
-            user:
-          attributes:
-            email:
-              blank: " : Este campo no puede estar vacío"
-              invalid: " : Este campo no es valido"
-              taken: ": Este correo ya esta ocupado"
-              
-            username:
-              taken: ": Este usuario ya esta ocupado"
-              blank: " : Este campo no puede estar vacío"
-              invalid: " : Este campo no es valido"
-              too_short: ' : Nombre muy corto, no es valido'
-              too_long: ' : Nombre muy largo, no es valido'   
-            password: 
-              blank: " : Este campo no puede estar vacío"
-              too_short: ' : Contraseña muy corta, no es valida'
-              too_long: ' : Contraseña muy larga, no es valida'           
+              blank: 'no puede estar vacío'
+      user:
+        email: 'Correo electrónico'
+        username: 'Usuario'
+        password: 'Contraseña'
+      category:
+        name: 'Nombre'
   common:
     confirm: '¿Estás seguro?'
     back: 'Volver'
+    not_logged_in: 'Tienes que hacer login o crearte una cuenta'
   shared:
     header:
       add: 'Añadir producto'
-      sections: 'Secciones'
+      login: 'Acceso'
+      register: 'Registro'
+      logout: 'Salir'
   authentication:
-      users:
-       create:
-         created: 'Tu cuenta se ha creado!'   
-      sessions:
-       create:
-         created: 'Bienvenido!'
-         failed: 'Login inválido!'       
+    users:
+      create:
+        created: 'Tu cuenta se ha creado!'
+    sessions:
+      create:
+        created: 'Bienvenido!'
+        failed: 'Login inválido!'
+      destroy:
+        destroyed: 'Tu sesión ha terminado! Hasta la próxima'
   products:
     edit:
       title: 'Editar producto'
@@ -64,7 +56,6 @@ es:
     index:
       title: 'Productos:'
       all: 'Todos'
-      articles: 'Total Articulos'
       min_price: 'Precio mínimo'
       max_price: 'Precio máximo'
       query_text: '¿Qué quieres buscar?'
@@ -75,30 +66,26 @@ es:
       edit: 'Editar producto'
       delete: 'Borrar producto'
     create:
-      created: 'Tu artículo se ha creado correctamente'
+      created: 'Tu producto se ha creado correctamente'
     update:
-      updated: 'Tu artículo se ha actualizado correctamente'
+      updated: 'Tu producto se ha actualizado correctamente'
     destroy:
-      destroyed: 'Tu artículo se ha eliminado correctamente'
-    form:
-     Create: 'Crea tu producto'  
+      destroyed: 'Tu producto se ha eliminado correctamente'
   categories:
     category:
       edit: 'Editar'
       delete: 'Borrar'
     index:
-      title: 'Secciones'
-      new: 'Añadir Sección'
-      
+      title: 'Categorías'
+      new: 'Añadir categoría'
     edit:
-      title: 'Editar Sección'
+      title: 'Editar categoría'
     create:
-      created: 'Tu Sección se ha creado correctamente'
-      
+      created: 'Tu categoría se ha creado correctamente'
     update:
-      updated: 'Tu Sección se ha actualizado correctamente'
+      updated: 'Tu categoría se ha actualizado correctamente'
     destroy:
-      destroyed: 'Tu Sección se ha eliminado correctamente'
+      destroyed: 'Tu categoría se ha eliminado correctamente'
     new:
-      title: 'Añadir Sección'
+      title: 'Añadir categoría'
    
