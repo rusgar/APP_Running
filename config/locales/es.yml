@@ -9,9 +9,7 @@ es:
         title: 'Título'
         description: 'Descripción'        
         price: 'Precio'
-        image: 'Foto'
-        
-        
+        image: 'Foto'          
     errors:
       models:
         product:
@@ -22,6 +20,27 @@ es:
               blank: ': Este campo no puede estar vacío'
             price:
               blank: ': Este campo no puede estar vacío'
+    errors:
+      models:
+        user:
+          attributes:
+            user:
+          attributes:
+            email:
+              blank: " : Este campo no puede estar vacío"
+              invalid: " : Este campo no es valido"
+              taken: ": Este correo ya esta ocupado"
+              
+            username:
+              taken: ": Este usuario ya esta ocupado"
+              blank: " : Este campo no puede estar vacío"
+              invalid: " : Este campo no es valido"
+              too_short: ' : Nombre muy corto, no es valido'
+              too_long: ' : Nombre muy largo, no es valido'   
+            password: 
+              blank: " : Este campo no puede estar vacío"
+              too_short: ' : Contraseña muy corta, no es valida'
+              too_long: ' : Contraseña muy larga, no es valida'           
   common:
     confirm: '¿Estás seguro?'
     back: 'Volver'
@@ -30,9 +49,13 @@ es:
       add: 'Añadir producto'
       sections: 'Secciones'
   authentication:
-    users:
-      create:
-        created: 'Tu cuenta se ha creado!'    
+      users:
+       create:
+         created: 'Tu cuenta se ha creado!'   
+      sessions:
+       create:
+         created: 'Bienvenido!'
+         failed: 'Login inválido!'       
   products:
     edit:
       title: 'Editar producto'

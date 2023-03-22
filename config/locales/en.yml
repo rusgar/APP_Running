@@ -53,6 +53,24 @@ en:
               blank: "can't be blank"
             price:
               blank: "can't be blank"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "can't be blank"
+              invalid: "can't be invalid"
+              taken: "can't be taken"              
+            username:
+              taken: "can't be taken"
+              blank: "can't be blank"
+              invalid: "can't be invalid"
+              too_short: 'very short username'
+              too_long: 'very long username'
+            password: 
+              blank: "can't be blank"
+              too_short: 'very short password'   
+              too_long: 'very long password'
   common:
     confirm: 'Are you sure?'
     back: 'Go back'
@@ -60,10 +78,14 @@ en:
     header:
       add: 'Add product'
       sections: 'Sections'
-    authentication:
+  authentication:
       users:
        create:
         created: 'Your account has been created!'
+      sessions:
+       create:
+         created: 'Welcome!'
+         failed: 'Invalid login!'    
   products:
     edit:
       title: 'Edit product'
