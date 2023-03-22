@@ -5,9 +5,10 @@ es:
     attributes:
       product:
         title: 'Título'
-        description: 'Descripción'
+        description: 'Descripción'        
         price: 'Precio'
         image: 'Foto'
+        
         
     errors:
       models:
@@ -50,6 +51,8 @@ es:
       updated: 'Tu artículo se ha actualizado correctamente'
     destroy:
       destroyed: 'Tu artículo se ha eliminado correctamente'
+    form:
+     Create: 'Crea tu producto'  
   categories:
     category:
       edit: 'Editar'

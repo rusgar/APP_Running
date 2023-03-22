@@ -21,7 +21,7 @@
   </div>
 
   <div>
-    <%= form.label :category_id %>
+    <%= form.label :category_id, :Seccion %>
     <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name %>
   </div>
 
@@ -30,5 +30,5 @@
     <%= form.file_field :image %>
   </div>
 
-  <%= form.submit  %>
+  <%= form.submit t('.Create') %>
 <% end %>

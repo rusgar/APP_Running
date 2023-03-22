@@ -40,6 +40,7 @@ en:
         price: 'Price'
         image: 'image'
         
+        
     errors:
       models:
         product:
@@ -81,6 +82,8 @@ en:
       updated: 'Your product has been successfully updated'
     destroy:
       destroyed: 'Your product has been successfully destroyed'
+    form:
+     Create: 'Create a new product'
   categories:
     category:
       edit: 'Edit'
