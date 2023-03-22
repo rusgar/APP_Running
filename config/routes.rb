@@ -16,4 +16,8 @@ Rails.application.routes.draw do
 
   resources :products, path: '/'
 
+  namespace :authentication, path: '', as: '' do
+    resources :users, only: [:new, :create]
+  end
+
 end

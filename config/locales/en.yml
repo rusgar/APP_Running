@@ -30,6 +30,8 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  app_name: 'Running for tod@s'
+  meta_title: 'Your sports e-commerce'
   activerecord:
     models:
       product: Product
@@ -58,6 +60,10 @@ en:
     header:
       add: 'Add product'
       sections: 'Sections'
+    authentication:
+      users:
+       create:
+        created: 'Your account has been created!'
   products:
     edit:
       title: 'Edit product'

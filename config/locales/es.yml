@@ -1,4 +1,6 @@
 es:
+  app_name: 'Running para tod@s'
+  meta_title: 'Tu e-commerce deportivo'
   activerecord:
     models:
       product: Producto
@@ -27,6 +29,10 @@ es:
     header:
       add: 'Añadir producto'
       sections: 'Secciones'
+  authentication:
+    users:
+      create:
+        created: 'Tu cuenta se ha creado!'    
   products:
     edit:
       title: 'Editar producto'

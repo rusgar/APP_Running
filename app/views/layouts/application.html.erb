@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>APP_Running | Tu e-commerce para tod@s </title>
+    <%
+=begin%>
+ <title>Runing para tod@s | Tu e-commerce para tod@s </title> 
+<%
+=end%>
+    <title><%= t('app_name') %> | <%= t('meta_title') %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
