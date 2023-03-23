@@ -31,7 +31,7 @@
 
 en:
   app_name: 'Running for tod@s'
-  meta_title: 'Your sports e-commerce'
+  meta_title: 'Your sports e-commerce'  
   activerecord:
     models:
       product: Product
@@ -42,12 +42,12 @@ en:
         title: 'Title'
         description: 'Description'
         price: 'Price'
-        image: 'Image'
-    user:
+        photo: 'Photo'
+      user:
         email: 'Email'
         username: 'Username'
         password: 'Password'
-    category:
+      category:
         name: 'Name'
   common:
     confirm: 'Are you sure?'
@@ -61,6 +61,7 @@ en:
       login: 'Login'
       register: 'Register'
       logout: 'Logout'
+      favorites: 'My favorites'
   authentication:
     users:
       create:
@@ -112,3 +113,6 @@ en:
       destroyed: 'Your category has been successfully destroyed'
     new:
       title: 'New category'
+  favorites:
+    index:
+      title: 'My favorites'
