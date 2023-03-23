@@ -23,13 +23,12 @@ class ProductsController < ApplicationController
         end
     end
 
-    def edit
-        product
+    def edit      
+        approved! product # product.user_id == Currebt.user.id
     end
     
-    def update
-        
-    
+    def update       
+        approved! product
         if product.update(product_params)
           redirect_to products_path, notice:  t('.updated')
         else
@@ -38,6 +37,7 @@ class ProductsController < ApplicationController
     end
 
     def destroy
+        approved! product
         product.destroy
     
         redirect_to products_path, notice: t('.destroyed'), status: :see_other

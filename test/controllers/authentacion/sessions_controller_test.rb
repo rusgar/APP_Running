@@ -1,7 +1,9 @@
 require "test_helper"
+
 class Authentication::SessionsControllerTest < ActionDispatch::IntegrationTest
+  
   def setup
-    @user = users(:paco01)
+    @user = users(:paco)
   end
   test "should get new" do
     get new_session_url
