@@ -35,7 +35,7 @@ es:
     not_authorized: 'No tienes permisos para esta acción'
     not_found: 'No se ha encontrado'
   shared:
-    header:
+    items:
       add: 'Añadir producto'
       login: 'Acceso'
       register: 'Registro'
