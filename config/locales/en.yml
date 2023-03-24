@@ -62,6 +62,7 @@ en:
       register: 'Register'
       logout: 'Logout'
       favorites: 'My favorites'
+      sections: 'My sections'
   authentication:
     users:
       create:
@@ -101,7 +102,7 @@ en:
       edit: 'Edit'
       delete: 'Delete'
     index:
-      title: 'Categories'
+      title: 'Sections'
       new: 'Add category'
     edit:
       title: 'Edit category'

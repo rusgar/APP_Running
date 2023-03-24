@@ -1,20 +1,30 @@
 <%= turbo_frame_tag 'home' do %>
-  <h2><%= t('.title') %></h2>
+  <div class=" my-2  py-2 text-2xl font-bold cursor-text text-center text-orange-600 bg-blue-200 ">   
+      <h2><%= t('.title') %></h2> 
+  </div>
+  <div class="flex justify-between overflow-x-scroll gap-2 px-2 py-2 my-4">  
+      <%= link_to t('.all'), products_path, class:"bg-orange-200   text-gray-600   px-4 py-2 rounded-2xl  hover:bg-blue-200 " %>
+      <%= render partial: 'category', collection: @categories %><br>
+  </div>
   <%= form_with url: products_path, method: :get do |form| %>
-         <%= form.text_field :query_text, placeholder: t('.query_text'), onChange: 'this.form.requestSubmit()', value: params[:query_text] %>
-         <%= form.number_field :min_price, placeholder: t('.min_price'), onChange: 'this.form.requestSubmit()', value: params[:min_price] %>
-         <%= form.number_field :max_price, placeholder: t('.max_price'),onChange: 'this.form.requestSubmit()', value: params[:max_price] %>
-         <%= form.select :order_by, options_for_select(Product::ORDER_BY.keys.map { |order| [t(".#{order}"), order] }, params[:order_by]), {}, { onChange: 'this.form.requestSubmit()' } %>
-  <% end %>
+       <%=form.text_field :query_text, placeholder: t('.query_text'),
+           onChange: 'this.form.requestSubmit()', value: params[:query_text], class: "w-full my-2 rounded-2xl border-orange-200"%>
+          <div class= "flex ">
+            <%=form.number_field :min_price, placeholder: t('.min_price'),
+             onChange: 'this.form.requestSubmit()', value: params[:min_price], class: "w-1/3 rounded-2xl  border-orange-200 "%>
+            <%=form.number_field :max_price, placeholder: t('.max_price'),
+             onChange: 'this.form.requestSubmit()', value: params[:max_price], class: "w-1/3 rounded-2xl mx-2 border-orange-200 "%>
+            <%=form.select :order_by, options_for_select(Product::ORDER_BY.keys.map{|order|[t(".#{order}"), order]}, params[:order_by]),{},
+             {onChange: 'this.form.requestSubmit()', class: "w-1/3 rounded-2xl border-orange-200 text-gray-600"} %>
+          </div>
+    <% end %>
 
-     <%= link_to t('.all'), products_path %>
-     <%= render partial: 'category', collection: @categories %>
-
-     <%= turbo_frame_tag :products do %>
-        <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products' do %>
-          <%= render partial: 'product', collection: @products %>
-          <%= turbo_frame_tag "products-#{@pagy.next}", class: 'products', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
-        <% end %>
-     <% end %>
+    <%=turbo_frame_tag :products, class:" flex flex-col m-2 "  do %>
+      <%=turbo_frame_tag "products-#{@pagy.page}", class: "products flex flex-col w-full sm:flex-row sm:flex-wrap sm:gap-x-2" do %>
+        <%= render partial: 'product', collection: @products %>
+        <%= turbo_frame_tag "products-#{@pagy.next}", class: "products flex flex-col w-full sm:flex-row sm:flex-wrap sm:gap-x-2", src: pagy_url_for(@pagy, @pagy.next),
+            loading: :lazy  if @pagy.next %>
+       <%end %> 
+    <%end %>
 <% end %>
 

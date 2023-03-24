@@ -41,6 +41,7 @@ es:
       register: 'Registro'
       logout: 'Salir'
       favorites: 'Mis favoritos'
+      sections: 'Secciones'
   authentication:
     users:
       create:
@@ -57,7 +58,7 @@ es:
     new:
       title: 'Añadir producto'
     index:
-      title: 'Productos:'
+      title: 'Productos'
       all: 'Todos'
       min_price: 'Precio mínimo'
       max_price: 'Precio máximo'
@@ -82,7 +83,7 @@ es:
       edit: 'Editar'
       delete: 'Borrar'
     index:
-      title: 'Categorías'
+      title: 'Secciones'
       new: 'Añadir categoría'
     edit:
       title: 'Editar categoría'
