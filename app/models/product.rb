@@ -15,8 +15,8 @@ class Product < ApplicationRecord
 
   has_one_attached :image
 
-  validates :title, presence: true
-  validates :description, presence: true
+  validates :title, length: {minimum: 5, maximum: 25},presence: true
+  validates :description, length: {minimum: 25, maximum: 130},presence: true
   validates :price, presence: true
   
   

@@ -1,5 +1,5 @@
 <%= turbo_frame_tag 'home' do %>
-  <div class=" my-2  py-2 text-2xl font-bold cursor-text text-center text-orange-600 bg-blue-200 ">   
+  <div class="  text-2xl rounded-2xl font-bold cursor-text text-center my-2  py-2 text-orange-600 bg-blue-200 ">   
       <h2><%= t('.title') %></h2> 
   </div>
   <div class="flex justify-between overflow-x-scroll gap-2 px-2 py-2 my-4">  
@@ -20,7 +20,7 @@
     <% end %>
 
     <%=turbo_frame_tag :products, class:" flex flex-col m-2 "  do %>
-      <%=turbo_frame_tag "products-#{@pagy.page}", class: "products flex flex-col w-full sm:flex-row sm:flex-wrap sm:gap-x-2" do %>
+      <%=turbo_frame_tag "products-#{@pagy.page}", class: "products flex flex-col w-full  sm:flex-row sm:flex-wrap sm:gap-x-2" do %>
         <%= render partial: 'product', collection: @products %>
         <%= turbo_frame_tag "products-#{@pagy.next}", class: "products flex flex-col w-full sm:flex-row sm:flex-wrap sm:gap-x-2", src: pagy_url_for(@pagy, @pagy.next),
             loading: :lazy  if @pagy.next %>
