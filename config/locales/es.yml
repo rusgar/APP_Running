@@ -97,5 +97,9 @@ es:
       title: 'Añadir categoría'
   favorites:
      index:
-       title: 'Mis Likes'   
+       title: 'Mis Likes' 
+  user_mailer:
+    welcome:
+      subject: ' Bienvenid@s a "Running para tod@s"'
+      welcome_message: 'Hey %{username}, Bienvenid@ a "Running para tod@s". Esperemos que vendas un montón !'       
    

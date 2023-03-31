@@ -117,3 +117,7 @@ en:
   favorites:
     index:
       title: 'My favorites'
+  user_mailer:
+    welcome:
+      subject: 'Welcome to your store "Running for everyone"'
+      welcome_message: 'Hey %{username}, welcome to "Running for everyone". We hope you sell a lot!'    
