@@ -1,3 +1,4 @@
+#require 'net/http'
 class Authentication::UsersController < ApplicationController
     skip_before_action :protect_pages
     def new
@@ -6,6 +7,12 @@ class Authentication::UsersController < ApplicationController
   
     def create
       @user = User.new(user_params)
+      @user.country = FetchCountryService.new(request.remote_ip).perform
+      # uri= URI('http://ip-api.com/json/24.48.0.1')
+      # response = Net::HTTP.get(uri)
+      # parsed_response = JSON.parse(response)
+      # country_code = parsed_response.dig("countryCode")
+      
 
       if @user.save
         UserMailer.with(user: @user).welcome.deliver_later
