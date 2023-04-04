@@ -48,6 +48,12 @@ gem "pg_search", "~> 2.3"
 #Pagination
 gem "pagy", "~> 6.0"
 
+# Tailwind
+gem "tailwindcss-rails", "~> 2.0"
+
+# View components
+gem "view_component", "~> 2.82"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -77,11 +83,10 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "webmock"
 end
 
 
 
 
-gem "tailwindcss-rails", "~> 2.0"
 
-gem "view_component", "~> 2.82"
