@@ -4,7 +4,7 @@ class UserMailer < ApplicationMailer
   # with the following lookup:
   #
   #   en.user_mailer.welcome.subject
-  #
+  #   http://127.0.0.1:3000/rails/mailers/user_mailer/welcome.txt?locale=es
   def welcome
     @user = params[:user]
     @username = @user.username
