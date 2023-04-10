@@ -90,3 +90,5 @@ end
 
 
 
+
+gem "sidekiq", "~> 7.0"
