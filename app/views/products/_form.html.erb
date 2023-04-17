@@ -5,13 +5,13 @@
     </div>
   <% end %>
 
-<div class="font-bold mb-4 text-orange-400">
+<div class=" font-bold mb-4  text-orange-400">
   <div >
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
 
-  <div >
+  <div class="" >
     <%= form.label :description %>
     <%= form.text_area :description %>
   </div>
@@ -30,6 +30,6 @@
     <%= form.label :image %>
     <%= form.file_field :image %>
   </div>
-</div>
+</div >
   <%= form.submit t('.Create') %>
 <% end %>

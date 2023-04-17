@@ -5,12 +5,14 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="  rounded-2xl font-bold cursor-text text-center my-4  py-4 text-orange-400 bg-blue-200 ">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: " rounded-2xl text-center text-gray-400" %>
   </div>
 
-  <div>
+  <div class="rounded-2xl font-bold cursor-text text-center my-2 py-2 text-orange-600  ">
+    <div class="transition ease-in-out delay-150  hover:-translate-y-2 hover:scale-90 rounded-2xl hover:bg-green-400 duration-300 ... ">    
     <%= form.submit %>
+    </div>
   </div>
 <% end %>
