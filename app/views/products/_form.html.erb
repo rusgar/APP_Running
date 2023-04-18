@@ -5,31 +5,33 @@
     </div>
   <% end %>
 
-<div class=" font-bold mb-4  text-orange-400">
+
   <div >
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class:" rounded-2xl cursor-text text-center  my-2  py-2 text-orange-400 bg-white " %>
   </div>
 
   <div class="" >
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class:" rounded-2xl    py-2 text-orange-400 bg-white " %>
   </div>
 
   <div >
     <%= form.label :price %>
-    <%= form.number_field :price,step: 0.01 %>
+    <%= form.number_field :price,step: 0.01, class:" rounded-2xl  my-2  py-2 text-orange-400 bg-white " %>
   </div>
 
-  <div >
+  <div  >
     <%= form.label :category_id, :Seccion %>
-    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name %>
+    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name  %>
   </div>
 
   <div >
     <%= form.label :image %>
     <%= form.file_field :image %>
   </div>
-</div >
+  <div class="rounded-2xl font-bold  text-orange-600  text-center my-2  py-2 transition ease-in-out delay-150  hover:-translate-y- hover:scale-90 rounded-2xl hover:bg-green-400 duration-300 ... ">
   <%= form.submit t('.Create') %>
+  </div>
+
 <% end %>

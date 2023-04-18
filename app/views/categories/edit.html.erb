@@ -1,7 +1,8 @@
-<h1><%= t('.title') %></h1>
+<h1 class= " text-2xl rounded-2xl font-bold cursor-text text-center my-2  py-2 text-orange-600 bg-blue-200 "><%= t('.title') %></h1>
 
-<%= render "form", category: @category %>
 
-<div>
+       <%= render "form", category: @category %>
+
+<div class=" rounded-2xl font-bold cursor-text text-center  my-2  py-2 text-orange-600 bg-blue-200 ">
   <%= link_to t('common.back'), categories_path %>
 </div>
