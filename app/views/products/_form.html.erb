@@ -7,27 +7,27 @@
 
 
   <div >
-    <%= form.label :title %>
+    <%= form.label :title,class:"text-orange-600" %>
     <%= form.text_field :title, class:" rounded-2xl cursor-text text-center  my-2  py-2 text-orange-400 bg-white " %>
   </div>
 
   <div class="" >
-    <%= form.label :description %>
-    <%= form.text_area :description, class:" rounded-2xl    py-2 text-orange-400 bg-white " %>
+    <%= form.label :description,class:"text-orange-600" %>
+    <%= form.text_area :description, class:" rounded-2xl py-2 text-orange-400 bg-white " %>
   </div>
 
   <div >
-    <%= form.label :price %>
+    <%= form.label :price,class:"text-orange-600" %>
     <%= form.number_field :price,step: 0.01, class:" rounded-2xl  my-2  py-2 text-orange-400 bg-white " %>
   </div>
 
   <div  >
-    <%= form.label :category_id, :Seccion %>
+    <%= form.label :category_id, :Seccion,class:"text-orange-600" %>
     <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name  %>
   </div>
 
   <div >
-    <%= form.label :image %>
+    <%= form.label :image,class:"text-orange-600" %>
     <%= form.file_field :image %>
   </div>
   <div class="rounded-2xl font-bold  text-orange-600  text-center my-2  py-2 transition ease-in-out delay-150  hover:-translate-y- hover:scale-90 rounded-2xl hover:bg-green-400 duration-300 ... ">

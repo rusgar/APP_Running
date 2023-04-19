@@ -1,5 +1,6 @@
-<h1 class='title'><%= @product.title %></h1>
-<%= image_tag @product.image, width: 200 if @product.image.attached? %>
+<h1 class='title rounded-2xl font-bold cursor-text text-center my-4  py-2 text-orange-400 bg-blue-200 '><%= @product.title %></h1>
+
+<%= image_tag @product.image,class:" object-cover " if @product.image.attached? %>
 
 <p class='description'><%= @product.description %></p>
 

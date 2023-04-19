@@ -1,10 +1,10 @@
-<%= link_to t('.add'), new_product_path, class: "mx-2 text-orange-400 font-bold", data: { turbo_frame: "modal" } if Current.user %>
-      <%= link_to t('.sections'), categories_path, class: "mx-2 text-orange-400 font-bold" if Current.user&.admin? %>
-      <%= link_to t('.favorites'), favorites_path, class: "mx-2 text-orange-400 font-bold" if Current.user %>
-      <%= link_to t('.login'), new_session_path, class: "mx-2 text-orange-400 font-bold" unless Current.user %>
-      <%= link_to t('.register'), new_user_path, class: "mx-2 text-orange-400 font-bold" unless Current.user %>
+<%= link_to t('.add'), new_product_path, class: "mx-2 text-orange-400 font-bold  px-2 py-2 rounded-2xl hover:bg-blue-200 ", data: { turbo_frame: "modal" } if Current.user %>
+      <%= link_to t('.sections'), categories_path, class: "mx-2 text-orange-400 font-bold px-2 py-2 rounded-2xl hover:bg-blue-200" if Current.user&.admin? %>
+      <%= link_to t('.favorites'), favorites_path, class: "mx-2 text-orange-400 font-bold px-2 py-2 rounded-2xl hover:bg-blue-200" if Current.user %>
+      <%= link_to t('.login'), new_session_path, class: "mx-2 text-orange-400 font-bold px-2 py-2 rounded-2xl hover:bg-blue-200" unless Current.user %>
+      <%= link_to t('.register'), new_user_path, class: "mx-2 text-orange-400 font-bold px-2 py-2 rounded-2xl hover:bg-blue-200" unless Current.user %>
       <%= link_to t('.logout'), session_path(Current.user.id),
         data: {
         turbo_method: :delete,
         turbo_confirm: t('common.confirm')
-        }, class: "mx-2 text-orange-400 font-bold" if Current.user %>
+        }, class: "mx-2 text-orange-400 font-bold " if Current.user %>
