@@ -43,6 +43,8 @@ en:
         description: 'Description'
         price: 'Price'
         photo: 'Photo'
+      section:
+        name: 'name'
       user:
         email: 'Email'
         username: 'Username'

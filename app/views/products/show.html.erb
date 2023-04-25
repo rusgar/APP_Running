@@ -1,19 +1,21 @@
-<h1 class='title rounded-2xl font-bold cursor-text text-center my-4  py-2 text-orange-400 bg-blue-200 '><%= @product.title %></h1>
+<h1 class='title rounded-2xl font-bold  text-center my-4  py-2 text-orange-400 bg-blue-200 '><%= @product.title %></h1>
 
-<%= image_tag @product.image,class:" object-cover " if @product.image.attached? %>
+<%= image_tag @product.image,class:" object-cover  md:container md:mx-auto " if @product.image.attached? %>
 
-<p class='description'><%= @product.description %></p>
+<p class='description  rounded-2xl font-bold text-center my-4  py-2  bg-blue-200 '><%= @product.description %></p>
 
-<span class='price'><%= @product.price %>€</span>
+<div class='price  rounded-2xl font-bold text-center text-orange-400 my-4  py-2  bg-blue-200 ' >
+---><%= @product.price %>€<---
+<%= render partial: 'favorite', locals: { product: @product } %>
+</div>
 
 <%= link_to t('.edit'), edit_product_path(@product) if @product.owner? %>
 <%= link_to t('.delete'), product_path(@product), data: {
   turbo_method: :delete,
   turbo_confirm: t('common.confirm')
   } if @product.owner? %>
-
+<p class=' rounded-2xl  text-center my-4  py-2  bg-blue-200 '>
 <%= link_to t('.view_more_products', username: @product.user.username), user_path(@product.user.username) %>
 
+</p>
 
-
-<%= render partial: 'favorite', locals: { product: @product } %>

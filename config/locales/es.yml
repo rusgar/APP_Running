@@ -5,13 +5,15 @@ es:
     models:
       product: Producto
       user: Usuario
-      category: Categoría
+      category: Seccion
     attributes:
       product:
         title: 'Título'
         description: 'Descripción'
         price: 'Precio'
         image: 'Foto'
+      category:
+        name: 'Nombre'
     errors:
       models:
         product:
@@ -84,17 +86,17 @@ es:
       delete: 'Borrar'
     index:
       title: 'Secciones'
-      new: 'Añadir categoría'
+      new: 'Añadir Seccion'
     edit:
-      title: 'Editar categoría'
+      title: 'Editar Seccion'
     create:
-      created: 'Tu categoría se ha creado correctamente'
+      created: 'Tu Seccion se ha creado correctamente'
     update:
-      updated: 'Tu categoría se ha actualizado correctamente'
+      updated: 'Tu Seccion se ha actualizado correctamente'
     destroy:
-      destroyed: 'Tu categoría se ha eliminado correctamente'
+      destroyed: 'Tu Seccion se ha eliminado correctamente'
     new:
-      title: 'Añadir categoría'
+      title: 'Añadir Seccion'
   favorites:
      index:
        title: 'Mis Likes' 
